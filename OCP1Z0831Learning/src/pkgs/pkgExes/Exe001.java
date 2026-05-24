@@ -11,6 +11,7 @@ public class Exe001 {
 	}
 
 	private void go(String[] args) {
+		System.out.println("HW...");
 	}
 
 }
