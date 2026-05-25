@@ -1,0 +1,52 @@
+
+cls
+
+rmdir bin /s /q
+
+mkdir bin
+
+del *.jar /s/q
+
+del *.class /s/q
+
+javac -d bin src\pkgs\pkgA\*.java src\pkgs\pkgB\*.java src\*.java
+
+javac -d bin -cp bin src\pkgs\pkgA\*.java src\pkgs\pkgB\*.java src\*.java
+
+*****************************************************************************************************
+
+cd C:\Users\Administrador\git\ROCP1Z0831J25202605191137\OCP1Z0831Learning
+
+rmdir bin /s /q
+
+mkdir bin
+
+del *.jar /s/q
+
+del *.class /s/q
+
+javac -d bin -cp bin src\pkgs\pkgB\ClassBA.java
+javac -d bin -cp bin src\pkgs\pkgB\ClassBB.java
+javac -d bin -cp bin src\pkgs\pkgB\PClassNotPackage.java
+javac -d bin -cp bin src\pkgs\pkgB\PPClassNotPackage.java
+
+javac -d bin src\pkgs\pkgB\ClassBA.java src\pkgs\pkgB\ClassBB.java src\pkgs\pkgB\PClassNotPackage.java src\pkgs\pkgB\PPClassNotPackage.java
+
+javac -d bin src\pkgs\pkgB\*.java
+
+javac -d bin -cp bin src\pkgs\pkgB\*.java
+
+dir /s *.class
+
+java -cp bin pkgs.pkgB.ClassBA
+java -cp bin pkgs.pkgB.ClassBB
+
+java -cp bin pkgs.pkgB.PClassNotPackage
+
+java -cp bin PClassNotPackage
+
+java -cp bin pkgs.pkgB.PPClassNotPackage
+java -cp bin PPClassNotPackage
+
+cls
+
