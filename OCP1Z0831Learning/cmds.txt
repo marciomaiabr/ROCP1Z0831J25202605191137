@@ -27,16 +27,7 @@ javac -p jars -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211
 jar -cvf jars/JarModulo2.jar -C bins/modulo2/ .
 javac -d bins/modulo3 srcs/modulo3/*.java srcs/modulo3/pkg3/pkg31/pkg311/*.java srcs/modulo3/pkg3/pkg31/pkg311/pkg3111/*.java
 jar -cvf jars/JarModulo3.jar -C bins/modulo3/ .
-javac -d bins/modulo4 srcs/modulo4/*.java srcs/modulo4/pkg4/pkg41/pkg411/*.java srcs/modulo4/pkg4/pkg41/pkg411/pkg4111/*.java
-
-srcs\modulo4\pkg4\pkg41\pkg411\pkg4111\ClassPkg4pkg41pkg411pkg4111A.java:5: error: package pkgmo2.pkgmo21.pkgmo211 does not exist
-        public static String s2 = pkgmo2.pkgmo21.pkgmo211.Classpkgmo2pkgmo21pkgmo211A.s;
-                                                         ^
-srcs\modulo4\pkg4\pkg41\pkg411\pkg4111\ClassPkg4pkg41pkg411pkg4111A.java:6: error: package pkgmo2.pkgmo21.pkgmo211.pkgmo2111 does not exist
-        public static String s3 = pkgmo2.pkgmo21.pkgmo211.pkgmo2111.ClassPkgmo2pkgmo21pkgmo211pkgmo2111A.s;
-                                                                   ^
-2 errors
-
+javac -p jars/JarModulooff2.jar -d bins/modulo4 srcs/modulo4/*.java srcs/modulo4/pkg4/pkg41/pkg411/*.java srcs/modulo4/pkg4/pkg41/pkg411/pkg4111/*.java
 jar -cvf jars/JarModulo4.jar -C bins/modulo4/ .
 javac -d bins/modulo5 srcs/modulo5/*.java srcs/modulo5/pkg5/pkg51/pkg511/*.java srcs/modulo5/pkg5/pkg51/pkg511/pkg5111/*.java
 jar -cvf jars/JarModulo5.jar -C bins/modulo5/ .
