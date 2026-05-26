@@ -1,0 +1,3 @@
+
+module mnModulo1 {
+}
