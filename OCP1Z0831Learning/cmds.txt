@@ -25,13 +25,7 @@ javac -d bins/modulooff2 srcs/modulooff2/pkgmo2/pkgmo21/pkgmo211/*.java srcs/mod
 jar -cvf jars/JarModulooff2.jar -C bins/modulooff2/ .
 javac -d bins/modulo1 srcs/modulo1/*.java srcs/modulo1/pkg1/pkg11/pkg111/*.java srcs/modulo1/pkg1/pkg11/pkg111/pkg1111/*.java
 jar -cvf jars/JarModulo1.jar -C bins/modulo1/ .
-javac -cp jars -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211/*.java srcs/modulo2/pkg2/pkg21/pkg211/pkg2111/*.java
-
-srcs\modulo2\module-info.java:3: error: module not found: mnModulo1m
-        requires mnModulo1m;
-                 ^
-1 error
-
+javac -p jars -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211/*.java srcs/modulo2/pkg2/pkg21/pkg211/pkg2111/*.java
 jar -cvf jars/JarModulo2.jar -C bins/modulo2/ .
 javac -d bins/modulo3 srcs/modulo3/*.java srcs/modulo3/pkg3/pkg31/pkg311/*.java srcs/modulo3/pkg3/pkg31/pkg311/pkg3111/*.java
 jar -cvf jars/JarModulo3.jar -C bins/modulo3/ .
