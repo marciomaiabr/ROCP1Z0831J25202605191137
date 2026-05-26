@@ -22,12 +22,7 @@ mkdir jars
 javac -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
 javac -d bins/modulooff2 srcs/modulooff2/pkgmo2/pkgmo21/pkgmo211/*.java srcs/modulooff2/pkgmo2/pkgmo21/pkgmo211/pkgmo2111/*.java
 javac -d bins/modulo1 srcs/modulo1/*.java srcs/modulo1/pkg1/pkg11/pkg111/*.java srcs/modulo1/pkg1/pkg11/pkg111/pkg1111/*.java
-javac -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211/*.java srcs/modulo2/pkg2/pkg21/pkg211/pkg2111/*.java
-srcs\modulo2\module-info.java:3: error: module not found: mnModulo1m
-        requires mnModulo1m;
-                 ^
-1 error
-
+javac -p bins/modulo1 -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211/*.java srcs/modulo2/pkg2/pkg21/pkg211/pkg2111/*.java
 javac -d bins/modulo3 srcs/modulo3/*.java srcs/modulo3/pkg3/pkg31/pkg311/*.java srcs/modulo3/pkg3/pkg31/pkg311/pkg3111/*.java
 javac -d bins/modulo4 srcs/modulo4/*.java srcs/modulo4/pkg4/pkg41/pkg411/*.java srcs/modulo4/pkg4/pkg41/pkg411/pkg4111/*.java
 javac -d bins/modulo5 srcs/modulo5/*.java srcs/modulo5/pkg5/pkg51/pkg511/*.java srcs/modulo5/pkg5/pkg51/pkg511/pkg5111/*.java
