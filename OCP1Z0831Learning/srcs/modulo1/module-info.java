@@ -1,5 +1,8 @@
 
 module mnModulo1m {
+	//exports pkg1.pkg11.*;//error: <identifier> expected
+	exports pkg1.pkg11.pkg111;
+	exports pkg1.pkg11.pkg111.pkg1111;
 }
 
 /*
