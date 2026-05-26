@@ -31,14 +31,16 @@ javac -d bins/modulo4 srcs/modulo4/*.java srcs/modulo4/pkg4/pkg41/pkg411/*.java 
 jar -cvf jars/JarModulo4.jar -C bins/modulo4/ .
 javac -d bins/modulo5 srcs/modulo5/*.java srcs/modulo5/pkg5/pkg51/pkg511/*.java srcs/modulo5/pkg5/pkg51/pkg511/pkg5111/*.java
 jar -cvf jars/JarModulo5.jar -C bins/modulo5/ .
-javac -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
+javac -p bins/modulo3 -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
 
-srcs\modulooff1\pkgmo1\pkgmo11\pkgmo111\pkgmo1111\ClassPkgmo1Pkgmo11Pkgmo111Pkgmo1111A.java:5: error: package pkg3.pkg31.pkg311 does not exist
+srcs\modulooff1\pkgmo1\pkgmo11\pkgmo111\pkgmo1111\ClassPkgmo1Pkgmo11Pkgmo111Pkgmo1111A.java:5: error: package pkg3.pkg31.pkg311 is not visible
         public static String s2 = pkg3.pkg31.pkg311.Classpkg3pkg31pkg311A.s;
-                                                   ^
-srcs\modulooff1\pkgmo1\pkgmo11\pkgmo111\pkgmo1111\ClassPkgmo1Pkgmo11Pkgmo111Pkgmo1111A.java:6: error: package pkg3.pkg31.pkg311.pkg3111 does not exist
+                                            ^
+  (package pkg3.pkg31.pkg311 is declared in module mnModulo3m, which is not in the module graph)
+srcs\modulooff1\pkgmo1\pkgmo11\pkgmo111\pkgmo1111\ClassPkgmo1Pkgmo11Pkgmo111Pkgmo1111A.java:6: error: package pkg3.pkg31.pkg311.pkg3111 is not visible
         public static String s3 = pkg3.pkg31.pkg311.pkg3111.ClassPkg3pkg31pkg311pkg3111A.s;
-                                                           ^
+                                                   ^
+  (package pkg3.pkg31.pkg311.pkg3111 is declared in module mnModulo3m, which is not in the module graph)
 2 errors
 
 jar -cvf jars/JarModulooff1.jar -C bins/modulooff1/ .
