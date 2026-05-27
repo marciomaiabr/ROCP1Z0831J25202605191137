@@ -38,3 +38,5 @@ javac -cp bins/modulo3 -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo11
 jar -cvf jars/JarModulooff1.jar -C bins/modulooff1/ .
 javac -d bins/modulooff3 srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/*.java srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/pkgmo3111/*.java
 jar -cvf jars/JarModulooff3.jar -C bins/modulooff3/ .
+
+java -p bins/modulo6 -m mnModulo6m/pkg6.pkg61.pkg611.pkg6111.ClassPkg6pkg61pkg611pkg6111A
