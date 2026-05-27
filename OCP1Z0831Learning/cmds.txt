@@ -36,7 +36,9 @@ javac -p jars -d bins/modulo6 srcs/modulo6/*.java srcs/modulo6/pkg6/pkg61/pkg611
 jar -cvf jars/JarModulo6.jar -C bins/modulo6/ .
 javac -d bins/modulooff3 srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/*.java srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/pkgmo3111/*.java
 jar -cvf jars/JarModulooff3.jar -C bins/modulooff3/ .
-javac -cp bins/modulo3 -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
+javac -cp bins/modulo3;bins/modulooff3 -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
 jar -cvf jars/JarModulooff1.jar -C bins/modulooff1/ .
 
 java -p jars -m mnModulo6m/pkg6.pkg61.pkg611.pkg6111.ClassPkg6pkg61pkg611pkg6111A
+
+java -cp jars/* pkgmo1.pkgmo11.pkgmo111.pkgmo1111.ClassPkgmo1Pkgmo11Pkgmo111Pkgmo1111A
