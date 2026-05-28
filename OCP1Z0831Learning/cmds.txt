@@ -1,0 +1,24 @@
+
+cd C:\Users\Administrador\git\ROCP1Z0831J25202605191137\OCP1Z0831Learning
+
+cls
+
+rmdir bins /s /q
+rmdir jars /s /q
+
+del *.class /s/q
+del *.jar /s/q
+
+mkdir bins\moduloExe
+mkdir bins\moduloInterfaces
+mkdir bins\moduloLocator
+mkdir jars
+
+javac -d bins/moduloInterfaces srcs/moduloInterfaces/*.java srcs/moduloInterfaces/br/com/pkgModuloInterfaces/*.java
+jar -cvf jars/JarModuloInterfaces.jar -C bins/moduloInterfaces/ .
+javac -p jars -d bins/moduloLocator srcs/moduloLocator/*.java srcs/moduloLocator/br/com/pkgModuloLocator/*.java
+jar -cvf jars/JarModuloLocator.jar -C bins/moduloLocator/ .
+javac -p jars -d bins/moduloExe srcs/moduloExe/*.java srcs/moduloExe/br/com/pkgModuloExe/*.java
+jar -cvf jars/JarModuloExe.jar -C bins/moduloExe/ .
+
+java -p jars -m mnModuloExe/br.com.pkgModuloExe.ClassModuloExe
