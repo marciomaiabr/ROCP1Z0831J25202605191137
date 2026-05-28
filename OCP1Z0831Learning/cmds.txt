@@ -11,11 +11,14 @@ del *.jar /s/q
 
 mkdir bins\moduloExe
 mkdir bins\moduloInterfaces
+mkdir bins\moduloImpl1Prod
 mkdir bins\moduloLocator
 mkdir jars
 
 javac -d bins/moduloInterfaces srcs/moduloInterfaces/*.java srcs/moduloInterfaces/br/com/pkgModuloInterfaces/*.java
 jar -cvf jars/JarModuloInterfaces.jar -C bins/moduloInterfaces/ .
+javac -p jars -d bins/moduloImpl1Prod srcs/moduloImpl1Prod/*.java srcs/moduloImpl1Prod/br/com/pkgModuloImpl1Prod/*.java
+jar -cvf jars/JarModuloImpl1Prod.jar -C bins/moduloImpl1Prod/ .
 javac -p jars -d bins/moduloLocator srcs/moduloLocator/*.java srcs/moduloLocator/br/com/pkgModuloLocator/*.java
 jar -cvf jars/JarModuloLocator.jar -C bins/moduloLocator/ .
 javac -p jars -d bins/moduloExe srcs/moduloExe/*.java srcs/moduloExe/br/com/pkgModuloExe/*.java
