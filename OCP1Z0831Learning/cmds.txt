@@ -1,0 +1,70 @@
+
+jdeps
+jmod
+jlink
+jpackage
+
+java --list-modules
+java -p bins --list-modules
+java -p jars --list-modules
+
+jar -f jars/JarModulooff1.jar -d
+jar -f jars/JarModulooff2.jar -d
+jar -f jars/JarModulo3.jar -d
+jar -f jars/JarModulo6.jar -d
+
+*************************************************************************************************************************************************************************
+
+cd C:\Users\Administrador\git\ROCP1Z0831J25202605191137\OCP1Z0831Learning
+
+cls
+
+rmdir bins /s /q
+rmdir jars /s /q
+
+del *.class /s/q
+del *.jar /s/q
+
+mkdir bins\modulooff1
+mkdir bins\modulooff2
+mkdir bins\modulo1
+mkdir bins\modulo2
+mkdir bins\modulo3
+mkdir bins\modulo4
+mkdir bins\modulo5
+mkdir bins\modulo6
+mkdir bins\moduloExe
+mkdir bins\moduloInterfaces
+mkdir bins\moduloImpl1Prod
+mkdir bins\moduloImpl1Homolog
+mkdir bins\moduloLocator
+mkdir jars
+
+javac -d bins/modulooff2 srcs/modulooff2/pkgmo2/pkgmo21/pkgmo211/*.java srcs/modulooff2/pkgmo2/pkgmo21/pkgmo211/pkgmo2111/*.java
+jar -cvf jars/JarModulooff2.jar -C bins/modulooff2/ .
+javac -d bins/modulo1 srcs/modulo1/*.java srcs/modulo1/pkg1/pkg11/pkg111/*.java srcs/modulo1/pkg1/pkg11/pkg111/pkg1111/*.java
+jar -cvf jars/JarModulo1.jar -C bins/modulo1/ .
+javac -p jars -d bins/modulo2 srcs/modulo2/*.java srcs/modulo2/pkg2/pkg21/pkg211/*.java srcs/modulo2/pkg2/pkg21/pkg211/pkg2111/*.java
+jar -cvf jars/JarModulo2.jar -C bins/modulo2/ .
+javac -d bins/modulo3 srcs/modulo3/*.java srcs/modulo3/pkg3/pkg31/pkg311/*.java srcs/modulo3/pkg3/pkg31/pkg311/pkg3111/*.java
+jar -cvf jars/JarModulo3.jar -C bins/modulo3/ .
+javac -p jars/JarModulooff2.jar -d bins/modulo4 srcs/modulo4/*.java srcs/modulo4/pkg4/pkg41/pkg411/*.java srcs/modulo4/pkg4/pkg41/pkg411/pkg4111/*.java
+jar -cvf jars/JarModulo4.jar -C bins/modulo4/ .
+javac -d bins/modulo5 srcs/modulo5/*.java srcs/modulo5/pkg5/pkg51/pkg511/*.java srcs/modulo5/pkg5/pkg51/pkg511/pkg5111/*.java
+jar -cvf jars/JarModulo5.jar -C bins/modulo5/ .
+javac -p jars -d bins/modulo6 srcs/modulo6/*.java srcs/modulo6/pkg6/pkg61/pkg611/*.java srcs/modulo6/pkg6/pkg61/pkg611/pkg6111/*.java
+jar -cvf jars/JarModulo6.jar -C bins/modulo6/ .
+javac -d bins/modulooff3 srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/*.java srcs/modulooff3/pkgmo3/pkgmo31/pkgmo311/pkgmo3111/*.java
+jar -cvf jars/JarModulooff3.jar -C bins/modulooff3/ .
+javac -cp bins/modulo3;bins/modulooff3 -d bins/modulooff1 srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/*.java srcs/modulooff1/pkgmo1/pkgmo11/pkgmo111/pkgmo1111/*.java
+jar -cvf jars/JarModulooff1.jar -C bins/modulooff1/ .
+javac -d bins/moduloInterfaces srcs/moduloInterfaces/*.java srcs/moduloInterfaces/br/com/pkgModuloInterfaces/*.java
+jar -cvf jars/JarModuloInterfaces.jar -C bins/moduloInterfaces/ .
+javac -p jars -d bins/moduloImpl1Prod srcs/moduloImpl1Prod/*.java srcs/moduloImpl1Prod/br/com/pkgModuloImpl1Prod/*.java
+jar -cvf jars/JarModuloImpl1Prod.jar -C bins/moduloImpl1Prod/ .
+javac -p jars -d bins/moduloImpl1Homolog srcs/moduloImpl1Homolog/*.java srcs/moduloImpl1Homolog/br/com/pkgModuloImpl1Homolog/*.java
+jar -cvf jars/JarModuloImpl1Homolog.jar -C bins/moduloImpl1Homolog/ .
+javac -p jars -d bins/moduloLocator srcs/moduloLocator/*.java srcs/moduloLocator/br/com/pkgModuloLocator/*.java
+jar -cvf jars/JarModuloLocator.jar -C bins/moduloLocator/ .
+javac -p jars -d bins/moduloExe srcs/moduloExe/*.java srcs/moduloExe/br/com/pkgModuloExe/*.java
+jar -cvf jars/JarModuloExe.jar -C bins/moduloExe/ .
